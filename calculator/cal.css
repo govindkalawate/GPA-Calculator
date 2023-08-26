@@ -1,0 +1,136 @@
+.button2 {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: #0099FF;
+  border: 2px solid #0099FF;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.button2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: #0099FF;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button2:hover::before {
+  scale: 4;
+}
+
+.button2:hover {
+  color: #0099FF;
+  scale: 1.1;
+  box-shadow: 0 0px 20px #0099FF;
+}
+
+.button2:active {
+  scale: 1;
+}
+
+.button1 {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: #0099FF;
+  border: 2px solid #0099FF;;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+.button1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: #0099FF;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button1:hover::before {
+  scale: 4;
+}
+
+.button1:hover {
+  color: #0099FF;
+  scale: 1.1;
+  box-shadow: 0 0px 20px #0099FF;
+}
+
+.button1:active {
+  scale: 1;
+}
+
+.gpa-bar .gpa-fill {
+  height: 10px;
+  background-color: #0099FF;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Styles for screens larger than 768px */
+@media (min-width: 768px) {
+  .button2,
+  .button1 {
+    font-size: 24px;
+    padding: 12px 28px;
+  }
+}
+
+/* Styles for screens larger than 1024px */
+@media (min-width: 1024px) {
+  .button2,
+  .button1 {
+    font-size: 30px;
+    padding: 14px 32px;
+  }
+}
+
+/* Styles for screens larger than 1200px */
+@media (min-width: 1200px) {
+  .button2,
+  .button1 {
+    font-size: 36px;
+    padding: 16px 36px;
+  }
+}
+
+/* Additional responsive styles can be added as needed */
+
+/* Example of making the GPA bar responsive */
+@media (max-width: 768px) {
+  .gpa-bar .gpa-fill {
+    height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gpa-bar .gpa-fill {
+    height: 4px;
+  }
+}
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 120px; /* Adjust the width as needed */
+  height: 70px; /* Adjust the height as needed */
+  margin-right: 14px; /* Adjust the margin as needed */
+}

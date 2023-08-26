@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="DzzZWBFuY3mkEMu0icJCeV3VVtz33Wk-bYYxTwelDhY" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRM GPA calculator</title>
+    <link rel="stylesheet" href="/cal.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#212121]">
+    <div class="text-[#f5f5f5] text-3xl font-bold font-sans text-center mt-10">
+        <img src="/46465.png" alt="Logo" class="logo">
+        <br>GPA CALCULATOR
+    </div>
+    <section id="main-conatiner" class="gpa-calculator mx-[10%] my-[5%] rounded-2xl bg-[#323232]">
+        <div class="flex flex-col justify-center">
+            <div>
+                <p id="gpa" class="card hidden font-sans font-semibold text-[#ffff] w-auto text-2xl mx-[10%] my-5 text-center">
+                    You obtain grade point average of:
+                </p>
+                  
+                <div class="gpa-bar">
+                    <div class="gpa-fill"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mb-5   mx-[10%] w-[80%] ">
+        <form>
+            <div class="my-5">
+                <input type="reset"
+                    class=" p-1 text-xl rounded hidden lg:w-[20%] w-auto m-5 bg-[#f5f5f5] hover:bg-[#0099FF] hover:text-[#000000] border-2 text-[#000000] border-[#14FFEC] text-center lg:mx-[40%] mx-[40%] "
+                    id="reset"></input>
+            </div>
+            <table class="table-auto  w-full">
+                <thead>
+                    <tr class="text-lg text-[#00abf0] flex-auto italic shadow-none font-bold font-sans">
+                        <th class="w-[15%]" scope="col">#</th>
+                        <th scope="col">CREDIT</th>
+                        <th scope="col">GRADE</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <tr>
+                        <th class="text-neutral-400" scope="row">1</th>
+                        <td>
+                            <input type="number" id="one" class="credits m-5 block font-sans md:w-[90%] font-semibold shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]" min="1">
+                        </td>
+                        <td>
+                            <select class="grades cursor-pointer font-sans font-semibold drop-shadow-md shadow rounded focus:outline-none w-[70%]">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>I</option> <!-- Replaced "P" with "I" -->
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>*</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="text-neutral-400">2</th>
+                        <td>
+                            <input type="number" value="" class="credits font-sans md:w-[90%] font-semibold m-5 block appearance-none shadow rounded focus:outline-none focus:shadow-outline content-center text-center w-[70%] lg:w-[90%]" min="1">
+                        </td>
+                        <td>
+                            <select class="grades font-sans font-semibold cursor-pointer drop-shadow-md shadow rounded focus:outline-none w-[70%]">
+                                <option>O</option>
+                                <option>A+</option>
+                                <option>A</option>
+                                <option>B+</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>I</option> <!-- Replaced "P" with "I" -->
+                                <option>F</option>
+                                <option>Ab</option>
+                                <option>*</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- More rows... -->
+                </tbody>
+            </table>
+        </form>
+    </div>
+          
+    <div class="justify-evenly flex">
+        <div>
+            <button class="m-5 lg:w-40 w-auto flex-1 text-sm p-2 button2 rounded lg:text-xl bg-[#f5f5f5] hover:bg-[#0099FF] hover:text-[#000000] border-2 text-[#000000] border-[#14FFEC]" id="add">Add Course</button>
+        </div>
+        <div>
+            <button class="flex-1 button1 rounded lg:text-xl p-2  lg:w-40 m-5 text-sm bg-[#f5f5f5] hover:bg-[#0099FF] hover:text-[#000000] border-2 text-[#000000] border-[#14FFEC]" onclick="calc()">Calculate</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+    <footer class="text-[#f5f5f5] text-center mt-10">
+        <p>&copy; 2023 Govind Kalawate. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
